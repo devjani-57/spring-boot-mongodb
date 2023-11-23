@@ -13,7 +13,7 @@ import com.sample.springbootmongodb.repository.UserRepository;
 public class UserService {
 
 	@Autowired 
-	private UserRepository repository; //save, findById, findAll, update, delete
+	private UserRepository repository; 
 	
 	public List<User> findAllUsers(){
 		return repository.findAll();
