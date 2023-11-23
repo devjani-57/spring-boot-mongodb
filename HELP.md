@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.sample.springboot-mongodb' is invalid and this project uses 'com.sample.springbootmongodb' instead.
+* The original package name 'com.sample.spring-boot-mongodb' is invalid and this project uses 'com.sample.springbootmongodb' instead.
 
 # Getting Started
 
