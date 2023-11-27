@@ -28,6 +28,7 @@ public class UserController {
 	@GetMapping("/findall")
 	public List<User> getAllUsers(){
 		return service.findAllUsers();
+		
 	}
 	@GetMapping("get/{id}")
 	public ResponseEntity<User> getUserById(@PathVariable int id){
@@ -36,10 +37,11 @@ public class UserController {
 				.orElseGet(() ->new ResponseEntity<>(HttpStatus.NOT_FOUND));
 	}
 	@PostMapping("/create")
-	public ResponseEntity<User>deleteUser(@PathVariable int id,@RequestBody User user) {
-		User updatedUser=service.updateUser(id, user);
-		return new ResponseEntity<>(updatedUser,HttpStatus.OK);
-		}
+	public ResponseEntity<User> nwUser(@RequestBody User user){
+		User createdUser=service.createUser(user);
+		return new  ResponseEntity<>(createdUser,HttpStatus.CREATED);
+		
+	}
 	
 	@PutMapping("/update/{id}")
 	public ResponseEntity<User> updateUser(@PathVariable int id,@RequestBody User user) {
