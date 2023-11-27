@@ -30,7 +30,7 @@ public class UserController {
 		return service.findAllUsers();
 		
 	}
-	@GetMapping("get/{id}")
+	@GetMapping("/get/{id}")
 	public ResponseEntity<User> getUserById(@PathVariable int id){
 		Optional<User> user=service.findUserById(id);
 		return user.map(value ->new ResponseEntity<>(value,HttpStatus.OK))
