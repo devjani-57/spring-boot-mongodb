@@ -19,7 +19,7 @@ import com.sample.springbootmongodb.model.User;
 import com.sample.springbootmongodb.service.UserService;
 
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/api/users")
 public class UserController {
 
 	@Autowired
